@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 	{
 
         try {
-            connection C("dbname = testdb user = postgres password = cohondob \
+            connection C("dbname = testdb user = root password = password \
                 hostaddr = 127.0.0.1 port = 5432");
                 if (C.is_open()) {
                     cout << "Opened database successfully: " << C.dbname() << endl;
@@ -57,9 +57,15 @@ int main(int argc, char *argv[])
 
 	if (argc == 3)
 	{
-		cout << "Total Disk Space = ";
-        system("sudo du -sh /var/lib/ ");
+        try{
+            
+            cout << "Total Disk Space = ";
+            system("sudo du -sh /var/lib/ ");
 
+        } catch (const std::exception &e) {
+            cerr << e.what() << std::endl;
+            return 1;
+        }
 	}
 	
 

@@ -1,0 +1,37 @@
+language: c
+
+os:
+  - linux
+  - osx
+
+env:
+  - MODE=regular
+  - MODE=disable-set
+  - MODE=mini
+  - MODE=minimalist
+  - MODE=read-only
+
+addons:
+  apt:
+    packages:
+      - dpkg
+      - gcc
+      - libatm-dev
+      - libperl-dev
+      - libsensors4-dev
+      - libssh2-1-dev
+      - libssl-dev
+      - make
+      - perl-modules
+      - pkg-config
+      - python-dev
+      - python-setuptools
+
+before_install:
+  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo sh -c 'apt-get install -y libmariadbclient-dev || sudo apt-get install -y libmariadb-client-lgpl-dev'; fi
+
+sudo: required
+
+before_script: ci/before.sh
+
+script: ci/build.sh

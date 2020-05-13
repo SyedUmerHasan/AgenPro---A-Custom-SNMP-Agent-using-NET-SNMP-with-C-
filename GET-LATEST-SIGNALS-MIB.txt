@@ -1,0 +1,44 @@
+
+GET-LATEST-SIGNALS-MIB DEFINITIONS ::= BEGIN
+
+IMPORTS
+    MODULE-IDENTITY, OBJECT-TYPE, enterprises FROM SNMPv2-SMI
+;
+
+signalsInfo MODULE-IDENTITY
+    LAST-UPDATED "202005130000Z"
+    ORGANIZATION "Sample Organization"
+    CONTACT-INFO    
+         "postal:   umerhasan2010
+
+          email:    umerhasan2010@gmail.com"
+    DESCRIPTION
+        "Mib description "
+    REVISION     "202005130000Z"
+    DESCRIPTION
+        "My sample description"
+    REVISION     "202005130000Z"
+    DESCRIPTION
+        "First draft"
+    ::= { enterprises 53864 }
+
+--
+-- top level structure
+--
+latestSignalValue       OBJECT IDENTIFIER ::= { signalsInfo 1 }
+
+--
+-- Example scalars
+--
+
+oversightInteger OBJECT-TYPE
+    SYNTAX      OCTET STRING
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "the latest value of signal"
+    DEFVAL { "hello" }
+    ::= { latestSignalValue 1 }
+
+
+END

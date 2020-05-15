@@ -198,5 +198,8 @@ END
   1) R&D on SNMP - almost 1 day
   2) Learning go Language - 3 hours (But due to time limit, decide to go back with C++)
   3) Downloaded Open Source SNMP Softwares. (Trial of SNMP real time examples)
-  4) Resolving Dependency 
-  
+  4) Resolving Dependency issues with Ubuntu 19.10 - 5-7 hours 
+  5) Resolving Dependency issues with CentOS - 30 Minutes 
+
+## Better Approach
+  As we all know that deep down, Performance of C++ is somewhat faster than any otther language. Including Go Lang in some cases except parallel activities. So I used C++ on the basis of performance metrics and due to a reason of having a vast developers community of C++.

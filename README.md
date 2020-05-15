@@ -192,3 +192,11 @@ END
     
 ##### NOTE 
 ###### This Implmentation was done on CentOS Virtual Machine on GCP. You can test this with this IP Address - 34.71.230.62 
+
+
+## Time Distribution
+  1) R&D on SNMP - almost 1 day
+  2) Learning go Language - 3 hours (But due to time limit, decide to go back with C++)
+  3) Downloaded Open Source SNMP Softwares. (Trial of SNMP real time examples)
+  4) Resolving Dependency 
+  
